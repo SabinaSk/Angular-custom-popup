@@ -1,0 +1,63 @@
+.container {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    position:relative; /*odniesienie do buttona żeby był na zdjęciu*/
+}
+
+.container img {
+    width: 100%;  
+    height: auto; 
+}
+
+button {
+    background-color: #eef4ed;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    position:absolute;     /*dzięki temu button jest na zdjęciu, a pozycjonuje się wzgledem flexa*/
+}
+
+/*-------------------------------------------------*/
+
+.hero-container {
+    position:relative;  
+}
+
+.hero-container::after{             /*naklada na kontener ze zdjęciem tło w kolorze*/
+    background-color:  rgba(0, 128, 132, 0.25);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:99%;  /*musi mieć content, width/height i top/left, żeby był widoczny na zdjęciu*/
+}
+
+@media screen and (min-width: 1024px) {
+    button {
+        font-size:1.2rem;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 700px) {
+    button {
+        font-size:0.9rem;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 470px) {
+    button {
+        font-size:0.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    button {
+        font-size:0.6rem;
+        padding:10px;
+    }
+
+}

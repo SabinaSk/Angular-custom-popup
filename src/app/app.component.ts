@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Angular-custom-popup';
+  
+  isPopupVisible = false;
+
+  showPopup() {
+	this.isPopupVisible = true;
+  }
+
+  hidePopup() {
+	this.isPopupVisible = false;
+  }
 }
