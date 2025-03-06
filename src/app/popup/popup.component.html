@@ -1,0 +1,9 @@
+<div class="popup-overlay" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">     <!--stopPropagation() = stops that click inside the popup don’t accidentally close it-->
+      <h2>Welcome to the Convista!</h2>
+      <p>Want to stay updated? Subscribe to our website!</p>
+      
+      <button class="button1" (click)="closePopup()">Decline</button>
+      <button class="button2" (click)="confirmAction()">Confirm</button>
+    </div>
+  </div>
