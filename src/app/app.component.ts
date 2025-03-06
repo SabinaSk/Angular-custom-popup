@@ -12,12 +12,21 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   
   isPopupVisible = false;
+  isPopupConfirmed = false;
 
   showPopup() {
-	this.isPopupVisible = true;
+	  this.isPopupVisible = true;
   }
 
   hidePopup() {
-	this.isPopupVisible = false;
+	  this.isPopupVisible = false;
+  }
+
+  confirmPopup() {
+    this.isPopupConfirmed = true;
+    
+    setTimeout(() => {
+      this.isPopupConfirmed = false;
+    }, 3000);
   }
 }

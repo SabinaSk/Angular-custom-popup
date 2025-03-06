@@ -8,10 +8,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class PopupComponent {
 
+  @Output() confirm = new EventEmitter<void>();
   @Output() close = new EventEmitter<void>();
 
   confirmAction() {
-    alert("Thank you for subscribing!");
+    this.confirm.emit();
     this.close.emit();
   }
 

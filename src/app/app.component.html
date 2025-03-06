@@ -1,3 +1,5 @@
+<p *ngIf="isPopupConfirmed">Thank you for subscribing!</p>
+
 <div class="container">
 
   <div class="hero-container">
@@ -5,6 +7,6 @@
   </div>
 
   <button class="button" (click)="showPopup()">Get to know us!</button>
-  <app-popup *ngIf="isPopupVisible" (close)="hidePopup()"></app-popup>
+  <app-popup *ngIf="isPopupVisible" (close)="hidePopup()" (confirm)="confirmPopup()"></app-popup>
 
 </div>
