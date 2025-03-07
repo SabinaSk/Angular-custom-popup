@@ -1,9 +1,10 @@
-<p *ngIf="isPopupConfirmed">Thank you for subscribing!</p>
 
-<div class="container">
+<div class="hero-container">
 
-  <div class="hero-container">
-    <img class="hero-img" src="images/10.png" alt="hero_image">
+  <div class="alert" *ngIf="isPopupConfirmed">Thank you for subscribing!</div>
+
+  <div class="image-container">
+    <img class="img" src="images/10.png" alt="hero_image">
   </div>
 
   <button class="button" (click)="showPopup()">Get to know us!</button>
